@@ -1,0 +1,44 @@
+/* Font setup */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/*Colour Setup*/
+:root{
+    --primary: #9844eb;
+    --black: #010101;
+    --grey: #d3d4db;
+    --white: #ffffff;
+    --body: #fefefe;
+
+}
+
+body{
+    font-family: 'Plus Jarkata Sans', sans-serif;
+    background-color: var(--body);
+}
+
+.btn{
+    border-radius: 10px;
+    background-color: var(--primary); color: var(--white);
+   border-color: var(--primary);
+
+
+}
+
+.btn:hover{background-color: var(--black);
+color:var(--primary);
+border-color: var(--primary);}
+
+.btn:focus{background-color: var(--black);
+    color:var(--primary);
+    border-color: var(--primary);}
+
+.navbar{font-family: 'Plus Jarkata Sans', sans-serif;
+padding: 15px;
+}
+
+.form-control{border-width: 1px;}
+.form-control:focus{box-shadow: none;
+border: 3px solid var(--primary);}
+
+
+
