@@ -4,7 +4,8 @@
 /*Colour Setup*/
 :root{
     --primary: #9844eb;
-    --black: #010101;
+    --blackbooth: #2B3035;
+    --black:#000000;
     --grey: #d3d4db;
     --white: #ffffff;
     --body: #fefefe;
@@ -31,6 +32,10 @@ border-color: var(--primary);}
 .btn:focus{background-color: var(--black);
     color:var(--primary);
     border-color: var(--primary);}
+    .btn:active{background-color: var(--black);
+        color:var(--primary);
+        border-color: var(--primary);}
+
 
 .navbar{font-family: 'Plus Jarkata Sans', sans-serif;
 padding: 15px;
@@ -40,5 +45,22 @@ padding: 15px;
 .form-control:focus{box-shadow: none;
 border: 3px solid var(--primary);}
 
+/* tabs-pills style */
 
+.nav-pills{
+    background-color: var(--primary);
+    font-family: 'Plus Jarkata Sans', sans-serif;
+
+  }
+
+  .nav-link{color: var(--white);}
+  .nav-link:hover{color:var(--black)}
+
+.nav-pills .nav-link.active{background-color: var(--blackbooth) !important;
+    color: var(--primary) !important;
+border-radius: 0px;}
+.nav-pills .nav-link.focus{background-color: var(--blackbooth) !important;
+    color: var(--primary) !important;
+border-radius: 0;}
+.btn:active{background-color: var(--primary) !important;}
 
