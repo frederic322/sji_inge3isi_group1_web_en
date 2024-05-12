@@ -1,0 +1,182 @@
+.body{
+    
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+:root {
+    --main-color:#9844eb;
+    --color2:#9844eb9a;/* Define the color variable */
+    
+}
+nav{
+    background-color: var(--main-color);
+    display: flex;
+   height:40px;
+    
+}
+.search-container{
+    display: flex;
+    align-items: center;
+    margin-left: 40%;
+    
+}
+.sub-container{
+    display: flex;
+
+    justify-content: space-between;
+    width:75%;
+    margin-top: 15px;
+    margin-left: 143px;
+    /* padding: 100px; */
+}
+.search-container1{
+    display: flex;
+    align-items: center; 
+    
+}
+
+.inputss input[type="text"]{
+    padding: 8px;
+    margin-right: 5px;
+    border-radius: 15px;
+    border: none;
+    /* justify-content: center; */
+    width: 300px;
+}
+.inputs input[type="text"]{
+    padding: 8px;
+    margin-right: 5px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(247, 244, 244);
+    /* justify-content: center; */
+    width: 200px;
+}
+.container1{
+    display: flex;
+    flex-direction: column;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:25px;
+    padding-left: 115px;
+    width: 80%;
+}
+/* #box{
+    height: 23px;
+    width: 70px;
+    background-color: var(--main-color);
+    border-radius: 2px;
+    text-align: center;
+  
+   
+
+}
+#box1{
+    height: 23px;
+    width: 75px;
+    background-color: var(--main-color);
+    border-radius: 2px;
+    text-align: center;
+    padding-left: 2px;
+  
+   
+
+}
+#box2{
+    height: 23px;
+    width: 85px;
+    background-color: var(--main-color);
+    border-radius: 2px;
+    text-align: center;
+   
+
+}
+#box3{
+    height: 23px;
+    width: 75px;
+    background-color: var(--main-color);
+    border-radius: 2px;
+    text-align: center;
+   
+
+}
+#box4{
+    height: 23px;
+    width: 82px;
+    background-color: var(--main-color);
+    border-radius: 2px;
+    text-align: center;
+
+}
+#box5{
+    height: 23px;
+    width: 75px;
+    background-color: var(--main-color);
+    border-radius: 2px;
+    text-align: center;
+   
+
+}
+#box6{
+    height: 23px;
+    width:75px;
+    background-color: var(--main-color);
+    border-radius: 2px;
+    text-align: center;
+   
+
+}
+#box7{
+    height: 23px;
+    width:100px;
+    background-color: var(--main-color);
+    border-radius: 2px;
+    text-align: center;
+   
+
+}
+#box8{
+    height: 23px;
+    width: 95px;
+    background-color: var(--main-color);
+    border-radius: 2px;
+    text-align: center;
+    */
+
+.button{
+    padding: 10px 20px;
+    /* margin: 5px; */
+    background-color: var(--color2);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+.active{
+    background-color: var(--main-color);
+}
+.squares{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+    margin-top: 10px;
+    width: 75%;
+    /* justify-content: center; */
+    margin-left: 100px;
+    height: 40vh;
+    
+}
+.square{
+    background-color:var(--main-color) ;
+    border-radius: 10px;
+    width:30%;
+    height: 50vh;
+
+
+}
