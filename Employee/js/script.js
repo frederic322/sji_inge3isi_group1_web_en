@@ -90,8 +90,9 @@ function readInfo(pic, name, email, phone, sector, activity, region, department,
     document.querySelector("#showPhone").value = phone;
     document.querySelector("#ShowSector").value = sector;
     document.querySelector("#Showactivity").value = activity;
+    document.querySelector("#ShowRegion").value = region;
 
-    // Update Region selection
+    /* Update Region selection
     const regionSelect = document.getElementById("ShowRegion");
     for (let i = 0; i < regionSelect.options.length; i++) {
       if (regionSelect.options[i].value === region) {
@@ -99,6 +100,15 @@ function readInfo(pic, name, email, phone, sector, activity, region, department,
         break;
       }
     }
+
+    const departmentSelect = document.getElementById("ShowDepartment");
+    for (let i = 0; i < departmentSelect.options.length; i++) {
+      if (departmentSelect.options[i].value === department) {
+        departmentSelect.selectedIndex = i;
+        break;
+      }
+    }*/
+
 
     document.querySelector("#ShowDepartment").value = department;
     document.querySelector("#ShowDistrict").value = district;
@@ -115,12 +125,12 @@ function editInfo(index, pic, name, email, phone, sector, activity, region, depa
     userName.value = name,
     email.value = email,
     phone.value = phone,
-    Sector.value = sector,
+    sector.value = sector,
     activity.value = activity,
     Region.value = region,
-    Department.value = department,
-    District.value = district,
-    Neighborhood.value = neighborhood,
+    department.value = department,
+    district.value = district,
+    neighborhood.value = neighborhood,
     pLocation.value = plocation
 
     submitBtn.innerText = "Update"
@@ -145,12 +155,12 @@ form.addEventListener('submit', (e)=> {
         employeeName: userName.value,
         employeePhone: phone.value,
         employeeEmail: email.value,
-        employeeSector: Sector.value,
+        employeeSector: sector.value,
         employeeActivity: activity.value,
         employeeRegion: Region.value,
-        employeeDepartment: Department.value,
-        employeeDistrict: District.value,
-        employeeNeighborhood: Neighborhood.value,
+        employeeDepartment: department.value,
+        employeeDistrict: district.value,
+        employeeNeighborhood: neighborhood.value,
         employeepLocation: pLocation.value,
     };
 
