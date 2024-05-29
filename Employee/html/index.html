@@ -14,6 +14,7 @@
   </head>
   <body>
     <!--Navbar section-->
+    <header class="header_part">
     <nav class="navbar sticky-top bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
           <a class="navbar-brand">
@@ -28,7 +29,7 @@
           </form>
           <button class="btn btn-outline-success me-2" type="button">Main button</button>
         </div>
-      </nav>
+      </nav></header>
     <!--Types of sectors section-->
     <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
       <li class="nav-item" role="presentation">
@@ -67,37 +68,40 @@
       <!--First for all the employees-->
       <div class="tab-pane fade show active" id="pills-All" role="tabpanel" aria-labelledby="pills-All-tab" tabindex="0"> <section class="p-3">
 
-        <div class="row">
-            <div class="col-12">
-                <button class="btn btn-primary newUser" data-bs-toggle="modal" data-bs-target="#userForm">New User <i class="bi bi-people"></i></button>
-            </div>
-        </div>
+
 
         <div class="row">
-            <div class="col-12">
-                <table class="table table-striped table-hover mt-3 text-center table-bordered">
+            <div class="col-12 ">
+              <div class="table-responsive shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                <div class="row">
+                  <div class="col-12">
+                      <button class="btn btn-primary newUser" data-bs-toggle="modal" data-bs-target="#userForm">New User <i class="bi bi-people"></i></button>
+                  </div>
+              </div>
+                <table class="table table-striped table-hover mt-3 text-center table-bordered table-dark">
 
                     <thead>
                         <tr>
-                            <th>E.No</th>
-                            <th>Picture</th>
-                            <th>Name</th>
-                            <th>Sector</th>
-                            <th>Activity</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Region</th>
-                            <th>Department</th>
-                            <th>District</th>
-                            <th>Neighbourhood</th>
-                            <th>Precise Location</th>
-
+                          <th>E.No</th>
+                          <th>Picture</th>
+                          <th>Name</th>
+                          <th>Sector</th>
+                          <th>Activity</th>
+                          <th>Email</th>
+                          <th>Phone</th>
+                          <th>Region</th>
+                          <th>Department</th>
+                          <th>District</th>
+                          <th>Neighbourhood</th>
+                          <th>Precise Location</th>
+                          <th>Action</th>
                         </tr>
                     </thead>
 
                     <tbody id="data"></tbody>
 
                 </table>
+              </div>
             </div>
         </div>
 
@@ -123,7 +127,7 @@
                                 <input type="file" name="" id="imgInput">
                                 <i class="bi bi-plus-circle-dotted"></i>
                             </label>
-                            <img src="../images/Profile Icon.webp" alt="" width="200" height="200" class="img">
+                            <img src="./image/Profile Icon.webp" alt="" width="200" height="200" class="img">
                         </div>
 
                         <div class="inputField">
@@ -132,58 +136,71 @@
                                 <input type="text" name="" id="name" required>
                             </div>
                             <div>
-                              <label for="sector">Sector:</label>
-                              <select class="form-select" aria-label="Default select example" id="sector" required>
-                                <option selected>Open this select menu</option>
-                                <option value="Banks">Banks</option>
-                                <option value="Cabaret">Cabaret</option>
-                                <option value="Commerce">Commerce</option>
-                                <option value="Health">Health</option>
-                                <option value="Hotel">Hotel</option>
-                                <option value="Market">Market</option>
-                                <option value="SuperMarket">SuperMarket</option>
-                                <option value="Restaurant">Restaurant</option>
-                                <option value="Tourism">Tourism</option>
-                              </select>
-                            </div>
-                            <div>
-                              <label for="activity">Activity:</label>
-                              <input type="text" name="" id="activity" required>
-                          </div>
-                            <div>
                                 <label for="email">E-mail:</label>
                                 <input type="email" name="" id="email" required>
                             </div>
+                            <div>
+                                <label for="phone">Phone:</label>
+                                <input type="text" name="" id="phone" minlength="11" maxlength="11" required>
+                            </div>
 
                             <div>
-                                <label for="phone">Phone no:</label>
-                                <input type="text" name="" id="phone" minlength="9" maxlength="9" required>
-                            </div>
-                            <div>
-                              <label for="region">Region:</label>
-                              <select class="form-select" aria-label="Default select example" id="regionSelect" required>
-                                <option selected>Open this select menu</option>
+                              <label for="name" style="padding-right: 42px;">Sector:</label>
+                              <select class="form-select" aria-label="Default select example" id="Sector">
+                                <option selected>Select a Sector</option>
+                                <option >Banks</option>
+                              <option >Commerce</option>
+                              <option >Cabaret</option>
+                              <option >Health</option>
+                              <option >Hotel</option>
+                              <option >Market</option>
+                              <option >Supermarket</option>
+                              <option >Restaurant</option>
+                              <option >Tourism</option>
+                            </select>
                           </div>
+
+                            <div>
+                              <label for="name">Activity:</label>
+                              <input type="text" name="" id="activity" required>
+                          </div>
+
+
                           <div>
-                            <label for="department">Department:</label>
-                            <select class="form-select" aria-label="Default select example" id="departmentSelect" disabled required>
-                              <option selected>Open this select menu</option>
+                            <label for="name"  style="padding-right: 42px;">Region:</label>
+                            <select class="form-select" aria-label="Default select example" id="Region">
+                            <option selected>Select Region</option>
+                          </select>
                         </div>
+
                         <div>
-                          <label for="district">District:</label>
-                          <select class="form-select" aria-label="Default select example" id="districtSelect" disabled required>
-                            <option selected>Open this select menu</option>
+                          <label for="name" style="padding-right: 15px;">Department:</label>
+                          <select class="form-select" aria-label="Default select example" id="Department">
+                          <option selected>Select Department</option>
+                        </select>
                       </div>
+
                       <div>
-                        <label for="n">Neighbourhood:</label>
-                        <select class="form-select" aria-label="Default select example" id="sector" required>
-                          <option selected>Open this select menu</option>
+                        <label for="name" style="padding-right: 42px;">District:</label>
+                        <select class="form-select" aria-label="Default select example" id="District">
+                        <option selected>Select District</option>
+                      </select>
                     </div>
+
                     <div>
-                      <label for="city">Precise Location:</label>
-                      <select class="form-select" aria-label="Default select example" id="sector" required>
-                        <option selected>Open this select menu</option>
+                      <label for="name" style="padding-right: 15px;">Neighborhood:</label>
+                      <select class="form-select" aria-label="Default select example" id="Neighborhood">
+                      <option selected>Select Neighborhood</option>
+                    </select>
                   </div>
+
+                  <div>
+                    <label for="name" style="padding-right: 40px;">Location:</label>
+                    <select class="form-select" aria-label="Default select example" id="pLocation">
+                    <option selected>Select Location</option>
+                  </select>
+                </div>
+
                         </div>
 
                     </form>
@@ -195,9 +212,26 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <!--Read Data Modal-->
+
+
+
+
+
+    </div></div>
+      <div class="tab-pane fade " id="pills-Banks" role="tabpanel" aria-labelledby="pills-Banks-tab" tabindex="0">..zddd.</div>
+      <div class="tab-pane fade" id="pills-Cabaret" role="tabpanel" aria-labelledby="pills-Cabaret-tab" tabindex="0">..b.</div>
+      <div class="tab-pane fade" id="pills-Commerce" role="tabpanel" aria-labelledby="pills-Commerce-tab" tabindex="0">..c.</div>
+      <div class="tab-pane fade" id="pills-Health" role="tabpanel" aria-labelledby="pills-Health-tab" tabindex="0">..d.</div>
+      <div class="tab-pane fade" id="pills-Hotel" role="tabpanel" aria-labelledby="pills-Hotel-tab" tabindex="0">..e.</div>
+      <div class="tab-pane fade" id="pills-Market" role="tabpanel" aria-labelledby="pills-Market-tab" tabindex="0">..f.</div>
+      <div class="tab-pane fade" id="pills-SuperMarket" role="tabpanel" aria-labelledby="pills-SuperMarket-tab" tabindex="0">..g.</div>
+      <div class="tab-pane fade" id="pills-Restaurant" role="tabpanel" aria-labelledby="pills-Restaurant-tab" tabindex="0">..h.</div>
+      <div class="tab-pane fade" id="pills-Tourism" role="tabpanel" aria-labelledby="pills-Tourism-tab" tabindex="0">..i.</div>
+
+
+    <!--Another section-->
+      <!--Read Data Modal-->
     <div class="modal fade" id="readData">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
@@ -209,61 +243,92 @@
 
                 <div class="modal-body">
 
-                    <form action="#" id="myForm">
+                  <form action="#" id="myForm">
 
-                        <div class="card imgholder">
-                            <img src="../images/Profile Icon.webp" alt="" width="200" height="200" class="showImg">
+                    <div class="card imgholder">
+
+                        <img src="../images/Profile Icon.webp" alt="" width="200" height="200" class="showImg">
+                    </div>
+
+                    <div class="inputField">
+                        <div>
+                            <label for="name">Name:</label>
+                            <input type="text" name="" id="showName"disabled>
+                        </div>
+                        <div>
+                            <label for="email">E-mail:</label>
+                            <input type="email" name="" id="showEmail" disabled>
+                        </div>
+                        <div>
+                            <label for="phone">Phone:</label>
+                            <input type="text" name="" id="showPhone" minlength="11" maxlength="11" disabled>
                         </div>
 
-                        <div class="inputField">
-                            <div>
-                                <label for="name">Name:</label>
-                                <input type="text" name="" id="showName" disabled>
-                            </div>
-                            <div>
-                                <label for="age">Age:</label>
-                                <input type="number" name="" id="showAge" disabled>
-                            </div>
-                            <div>
-                                <label for="city">City:</label>
-                                <input type="text" name="" id="showCity" disabled>
-                            </div>
-                            <div>
-                                <label for="email">E-mail:</label>
-                                <input type="email" name="" id="showEmail" disabled>
-                            </div>
-                            <div>
-                                <label for="phone">Number:</label>
-                                <input type="text" name="" id="showPhone" minlength="11" maxlength="11" disabled>
-                            </div>
-                            <div>
-                                <label for="post">Post:</label>
-                                <input type="text" name="" id="showPost" disabled>
-                            </div>
-                            <div>
-                                <label for="sDate">Start Date:</label>
-                                <input type="date" name="" id="showsDate" disabled>
-                            </div>
-                        </div>
+                        <div>
+                          <label for="sector" style="padding-right: 42px;">Sector:</label>
+                          <select class="form-select" aria-label="Default select example" id="ShowSector" disabled>
+                            <option selected>Select a Sector</option>
+                            <option >Banks</option>
+                          <option >Commerce</option>
+                          <option >Cabaret</option>
+                          <option >Health</option>
+                          <option >Hotel</option>
+                          <option >Market</option>
+                          <option >Supermarket</option>
+                          <option >Restaurant</option>
+                          <option >Tourism</option>
+                        </select>
+                      </div>
 
-                    </form>
+                        <div>
+                          <label for="name">Activity:</label>
+                          <input type="text" name="" id="Showactivity" disabled>
+                      </div>
+
+
+                      <div>
+                        <label for="Region"  style="padding-right: 42px;">Region:</label>
+                        <select class="form-select" aria-label="Default select example" id="ShowRegion" disabled>
+
+                      </select>
+                    </div>
+
+                    <div>
+                      <label for="Department" style="padding-right: 15px;">Department:</label>
+                      <select class="form-select" aria-label="Default select example" id="ShowDepartment" disabled>
+                      <option selected>Select Department</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label for="District" style="padding-right: 42px;">District:</label>
+                    <select class="form-select" aria-label="Default select example" id="ShowDistrict" disabled>
+                    <option selected>Select District</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="Neighborhood" style="padding-right: 15px;">Neighborhood:</label>
+                  <select class="form-select" aria-label="Default select example" id="ShowNeighborhood" disabled>
+                  <option selected>Select Neighborhood</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="Location" style="padding-right: 40px;">Location:</label>
+                <select class="form-select" aria-label="Default select example" id="ShowpLocation" disabled>
+                <option selected>Select Location</option>
+              </select>
+            </div>
+
+                    </div>
+
+                </form>
                 </div>
             </div>
         </div>
     </div>
-  </div>
-      <div class="tab-pane fade " id="pills-Banks" role="tabpanel" aria-labelledby="pills-Banks-tab" tabindex="0">..z.</div>
-      <div class="tab-pane fade" id="pills-Cabaret" role="tabpanel" aria-labelledby="pills-Cabaret-tab" tabindex="0">..b.</div>
-      <div class="tab-pane fade" id="pills-Commerce" role="tabpanel" aria-labelledby="pills-Commerce-tab" tabindex="0">..c.</div>
-      <div class="tab-pane fade" id="pills-Health" role="tabpanel" aria-labelledby="pills-Health-tab" tabindex="0">..d.</div>
-      <div class="tab-pane fade" id="pills-Hotel" role="tabpanel" aria-labelledby="pills-Hotel-tab" tabindex="0">..e.</div>
-      <div class="tab-pane fade" id="pills-Market" role="tabpanel" aria-labelledby="pills-Market-tab" tabindex="0">..f.</div>
-      <div class="tab-pane fade" id="pills-SuperMarket" role="tabpanel" aria-labelledby="pills-SuperMarket-tab" tabindex="0">..g.</div>
-      <div class="tab-pane fade" id="pills-Restaurant" role="tabpanel" aria-labelledby="pills-Restaurant-tab" tabindex="0">..h.</div>
-      <div class="tab-pane fade" id="pills-Tourism" role="tabpanel" aria-labelledby="pills-Tourism-tab" tabindex="0">..i.</div>
 
-    
-    <!--Another section-->
 
 
 

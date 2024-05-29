@@ -3,13 +3,15 @@
 
 /*Colour Setup*/
 :root{
-    --primary: #eb4455;
+    --primary: #9844eb;
     --blackbooth: #2B3035;
     --black:#000000;
     --grey: #d3d4db;
     --white: #ffffff;
     --body: #fefefe;
 
+}
+th{background-color: var(--primary)!important;
 }
 
 body{
@@ -167,3 +169,4 @@ form .inputField > div input{
     color: #000;
     font-size: 18px;
 }
+
