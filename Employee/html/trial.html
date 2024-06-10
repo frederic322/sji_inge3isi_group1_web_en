@@ -1,0 +1,14 @@
+<script>
+    function updateCardData() {
+        const title = document.getElementById('cardTitle').value;
+        const text = document.getElementById('cardText').value;
+        const img = document.getElementById('cardImg').value;
+        const index = parseInt(document.getElementById('cardIndex').value);
+
+        const cardData = JSON.parse(localStorage.getItem('cardData')) || [];
+        cardData[index] = { title, text, img };
+        localStorage.setItem('cardData', JSON.stringify(cardData));
+
+        alert('Card data updated!');
+    }
+</script>
