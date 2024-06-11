@@ -199,4 +199,4 @@ form .inputField > div input{
     display: block; /* Show the error message when necessary */
 
 }
-
+.table-sm{overflow-y: hidden}
