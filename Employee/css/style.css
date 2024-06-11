@@ -1,6 +1,6 @@
 /* Font setup */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 /*Colour Setup*/
 :root{
     --primary: #9844ebef;
@@ -17,7 +17,7 @@ th{background-color: var(--primary)!important;
 }
 
 body{
-    font-family: 'Plus Jarkata Sans', sans-serif;
+    font-family: "Poppins", sans-serif;
     background-color: var(--body);
 
 
@@ -45,7 +45,7 @@ border-color: var(--primary);}
         border-color: var(--primary);}
 
 
-.navbar{font-family: 'Plus Jarkata Sans', sans-serif;
+.navbar{font-family: "Poppins", sans-serif;
 padding: 15px;
 }
 
@@ -57,7 +57,7 @@ border: 3px solid var(--primary);}
 
 .nav-pills{
     background-color: var(--primary);
-    font-family: 'Plus Jarkata Sans', sans-serif;
+    font-family: "Poppins", sans-serif;
 
   }
 
