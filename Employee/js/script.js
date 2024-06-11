@@ -306,7 +306,7 @@ Littoral:{
         };
       }
       updateLocationSelection();
-
+//function to validate phone number
 // Get the input field
 let phoneInput = document.getElementById('phone');
 
@@ -332,6 +332,85 @@ phoneInput.addEventListener('keypress', function(e) {
         errorMessage.style.display = 'none';
     }
 });
+//function for searching
+// Get the elements
+let input = document.querySelector('input[type="search"]');
+let table = document.querySelector('table');
+
+// Add an input event listener
+input.addEventListener('input', function() {
+    // Get the query
+    let query = this.value.toLowerCase();
+
+    // Get all the rows
+    let rows = table.querySelectorAll('tbody tr');
+
+    // Loop through the rows
+    for (let row of rows) {
+        // Get the row text
+        let rowText = row.textContent.toLowerCase();
+
+        // If the row text includes the query, show the row, otherwise hide it
+        if (rowText.includes(query)) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    }
+});
+//Activate the buttons of the nav bar and sort the table according to category
+// Insert CSS for .nav-link:active directly into the document head
+// Insert CSS for .selected directly into the document head
+const style = document.createElement('style');
+style.textContent = `
+  .selected {
+    background-color: var(--blackbooth) !important;
+    color: var(--primary) !important;
+    border-radius: 0px !important;
+  }
+`;
+document.head.appendChild(style);
+
+// Get all the buttons
+let buttons = document.querySelectorAll('.nav-link');
+
+// Set the "All" button as selected by default
+buttons[0].classList.add('selected');
+
+// Add a click
+
+// Add a click event listener to each button
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Remove the 'active' class from all buttons
+        buttons.forEach(btn => btn.classList.remove('selected'));
+
+        // Add the 'active' class to the clicked button
+        this.classList.add('selected');
+
+        // Filter the table
+        filterTable(this.textContent);
+    });
+});
+
+function filterTable(category) {
+    // Get all the rows
+    let rows = document.querySelectorAll('tbody tr');
+
+    // Loop through the rows
+    rows.forEach(row => {
+        // Get the category of the row (assuming it's in the third cell)
+        let rowCategory = row.cells[3].textContent;
+
+        // If the row category matches the selected category or the selected category is "All", show the row, otherwise hide it
+        if (rowCategory === category || category === 'All') {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    });
+}
+
 
 
 

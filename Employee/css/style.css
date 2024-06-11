@@ -3,7 +3,7 @@
 
 /*Colour Setup*/
 :root{
-    --primary: #9844eb;
+    --primary: #9844ebef;
     --blackbooth: #2B3035;
     --black:#000000;
     --grey: #d3d4db;
@@ -19,6 +19,9 @@ th{background-color: var(--primary)!important;
 body{
     font-family: 'Plus Jarkata Sans', sans-serif;
     background-color: var(--body);
+
+
+
 
 }
 
@@ -65,6 +68,7 @@ border: 3px solid var(--primary);}
 .nav-link:active{background-color: var(--blackbooth) !important;
     color: var(--primary) !important;
 border-radius: 0px;
+outline: none;
 }
 
 
@@ -184,7 +188,7 @@ form .inputField > div input{
 /*blured table*/
 #blur{
     background-color:rgba(255, 255, 255, 0)!important;
-    box-shadow: 0px 2px 5px var(--primary)!important;
+
 }
 
 /*error message*/
@@ -200,3 +204,13 @@ form .inputField > div input{
 
 }
 .table-sm{overflow-y: hidden}
+h2{color: var(--white);}
+
+/*scrollable table*/
+
+#scrollable{
+    overflow-y: scroll;
+    max-height: 600px;
+    background-color:rgba(255, 255, 255, 0)!important;
+    box-shadow: 0px 2px 5px var(--primary)!important;
+}
