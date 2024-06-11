@@ -127,13 +127,28 @@ function editInfo(index, pic, name, email, phone, sector, activity, region, depa
 }
 
 
-function deleteInfo(index){
-  if(confirm("Are you sure want to delete?")){
-      getData.splice(index, 1)
-      localStorage.setItem("userProfile", JSON.stringify(getData))
-      showInfo()
-  }
+function deleteInfo(index) {
+  //using swalfire for popups
+  Swal.fire({
+    title: 'Delete Confirmation',
+    text: "Are you sure you want to delete this information?",
+    icon: 'warning', // Optional icon for warning
+    showCancelButton: true,
+    confirmButtonColor: '#9844ebef', // Optional: Change confirm button color
+    cancelButtonColor: '#d33', // Optional: Change cancel button color
+    confirmButtonText: 'Yes, delete' // Customize confirm button text
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // User confirmed deletion
+      getData.splice(index, 1);
+      localStorage.setItem("userProfile", JSON.stringify(getData));
+      showInfo();
+    } else {
+
+    }
+  });
 }
+
 
 
 
@@ -158,7 +173,7 @@ form.addEventListener('submit', (e)=> {
     if(!isEdit){
         getData.push(information);
         //first show before alert
-        alert('Employee created successfully'); // success
+        showAlert(); // success
     }
     else{
         getData[editId] = information;
@@ -176,6 +191,17 @@ form.addEventListener('submit', (e)=> {
 
     imgInput.src = "../images/Profile Icon.webp";
 });
+
+//custom alert
+function showAlert() {
+  Swal.fire({
+    title: 'Employee Confirmation',
+    text: 'A new employee was created successfully.',
+    confirmButtonColor: '#9844ebef',
+    buttons: true, // Add a confirm button
+  });
+
+}
 
 
 // This is the js for region selection to precise location
