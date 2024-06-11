@@ -4,14 +4,15 @@
 /*Colour Setup*/
 :root{
     --primary: #9844ebef;
-    --blackbooth: #2B3035;
+    --blackbooth: #212429;
     --black:#000000;
     --grey: #d3d4db;
     --white: #ffffff;
-    --body:  #2B3035;
+    --body:  #212429;
 
 }
 
+.navbar{background-color:var(--blackbooth)!important;}
 
 th{background-color: var(--primary)!important;
 }
