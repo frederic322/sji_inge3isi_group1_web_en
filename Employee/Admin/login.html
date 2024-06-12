@@ -2,55 +2,93 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=0.9" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../css/login_style.css" />
 
     <title>Admin Sign-up</title>
   </head>
   <body>
     <div class="container">
+
       <div class="forms-container">
-        <div class="signin-signup">
+
+        <div class="signin-signup"><br>
           <form action="" class="sign-in-form">
+            <a class="navbar-brand" href="#">
+              <img src="../images/logo2.svg" alt="Logo" width="30" height="24">
+              Employee_Directory
+            </a> <br>
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input id="Username" type="text" placeholder="Username" />
+              <input id="Username" type="text" placeholder="Username" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input id="Password" type="password" placeholder="Password" />
+              <input id="Password" type="password" placeholder="Password" required />
             </div>
             <input type="submit" id="login" value="Login" class="btn solid" />
+            <p class="social-text" style="color: white;">Or Sign in with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
 
           </form>
-          <form action="" id="sign_up" class="sign-up-form">
+
+          <form action="" id="sign_up" class="sign-up-form"><br>
+            <a class="navbar-brand" href="#">
+              <img src="../images/logo2.svg" alt="Logo" width="30" height="24">
+              Employee_Directory
+            </a> <br>
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input id="username" type="text" placeholder="Username" />
+              <input id="username" type="text" placeholder="Username" required/>
             </div>
             <div class="error"></div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input id="email" type="email" placeholder="Email" />
+              <input id="email" type="email" placeholder="Email" required/>
             </div>
             <div class="error"></div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input id="password" type="password" placeholder="Password" />
+              <input id="password" type="password" placeholder="Password" required/>
             </div>
             <div class="error"></div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input id="psw" type="password" placeholder="Confirm Password" />
+              <input id="psw" type="password" placeholder="Confirm Password" required/>
             </div>
             <div class="error"></div>
             <input type="submit" id="btn" class="btn" value="Sign up" />
+            <p class="social-text" style="color: white;">Or Sign up with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
 
           </form>
         </div>
@@ -83,6 +121,10 @@
         </div>
       </div>
     </div>
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
 <script src="../js/sign_up.js"></script>
 <script src="../js/sign_in.js"></script>
 <script src="../js/sweetalert.js"></script>
