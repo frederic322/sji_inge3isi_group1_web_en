@@ -50,14 +50,14 @@ body {
     border-bottom-right-radius: 10px;
     text-align: center;
 }
-.card-body1{
+/* .card-body1{
     text-align: left;
     border: 5px;
     width: 100%;
     background-color: #f8f9fa;
     height: 65vh;
     margin-left: 10px;
-}
+} */
 #Name{
     margin-bottom: 1rem;
 }
@@ -105,9 +105,9 @@ body {
     opacity: 1;
 }
 
-/* Popup styling */
-#popup {
-    display: none; /* Initially hidden */
+
+/* #popup {
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -128,7 +128,7 @@ body {
 .image{
     width:50%;
     height: 70vh;
-    /* padding: 10px; */
+   
 
 }
 .card1{
@@ -142,32 +142,21 @@ body {
     height:30vh;
     border-radius: 2%;
     object-fit: cover;
-    /* margin-top: 5px; */
+   
     margin-left: 1rem;
     box-shadow: 0 8px 8px rgba(240, 160, 160, 0.3);
     padding: 2rem;
 
 }
 
- /* #popup .card-body {
-  width: 60%;
- 
-  border:5px;
-  height: 95vh;
-  background-color: #f8f9fa;
-}  */ 
 
-/* #popup .card-title {
-    font-size: 1rem;
-} */
-
-#popup .card-text {
+/* #popup .card-text {
     margin: 5px 0;
     color: #495057;
-}
+} */
 
-/* Overlay for the popup */
-#popup-overlay {
+
+/* #popup-overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -176,9 +165,9 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
-}
+} */ 
 
-/* Show the popup and overlay when activated */
+
 .show-popup #popup,
 .show-popup #popup-overlay {
     display: block;
@@ -191,4 +180,70 @@ body {
     --white: #ffffff;
     --body:  #2B3035;
 
+}
+
+#popup {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+#popup .row {
+    display: flex;
+    align-items: center;
+}
+
+#popup img {
+    border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 8rem;
+    margin-left: 1.5rem;
+    /* border: 100px; */
+  
+}
+
+.card-body1 {
+    padding: 3rem;
+    margin-left: 3rem;
+
+}
+
+.card-body1 h5 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-body1 p {
+    margin: 5px 0;
+    color: #666;
+}
+
+
+.card-body1 p#Phone,
+.card-body1 p#Sector,
+.card-body1 p#activity,
+.card-body1 p#Region,
+.card-body1 p#Department,
+.card-body1 p#District,
+.card-body1 p#Neighborhood,
+.card-body1 p#pLocation {
+    line-height: 1.5;
+} 
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #110f0f;
+}
+
+.close-button:hover {
+    color: rgb(180, 13, 13);
 }
