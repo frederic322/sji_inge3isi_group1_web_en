@@ -59,3 +59,34 @@ getData.forEach(userProfile => {
     // Add the column to the container
     cardContainer.appendChild(col);
 });
+
+//filtering by sector
+// Get all the buttons
+let buttons = document.querySelectorAll(".nav-link");
+
+// Add a click event listener to each button
+buttons.forEach(button => {
+    button.addEventListener("click", function() {
+        // Get the sector from the button text
+        let sector = this.textContent;
+
+        // Get all the cards
+        let cards = document.querySelectorAll(".card");
+
+        // Loop through the cards
+        cards.forEach(card => {
+            // Get the sector of the card
+            let cardSector = card.querySelector(".card-text").textContent;
+
+            // If the card's sector matches the button's sector or the button is 'All', show the card, otherwise hide it
+            if (cardSector === sector || sector === 'All') {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+});
+
+
+
