@@ -1,0 +1,123 @@
+/* Font setup */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+/*Colour Setup*/
+:root{
+    --primary: #9844eb;
+    --blackbooth: #212429;
+    --black:#000000;
+    --grey: #d3d4db;
+    --white: #ffffff;
+    --body:  #212429;
+
+}
+
+.navbar{background-color:var(--blackbooth)!important;}
+
+th{background-color: var(--primary)!important;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color:var(--blackbooth);
+color: var(--white);
+
+
+
+}
+
+.btn{
+    border-radius: 10px;
+    background-color: var(--primary); color: var(--white);
+   border-color: var(--primary);
+
+
+}
+
+.btn:hover{background-color: var(--black);
+color:var(--primary);
+border-color: var(--primary);}
+
+.btn:focus{background-color: var(--black);
+    color:var(--primary);
+    border-color: var(--primary);}
+    .btn:active{background-color: var(--black);
+        color:var(--primary);
+        border-color: var(--primary);}
+
+
+.navbar{font-family: "Poppins", sans-serif;
+padding: 15px;
+}
+
+.form-control{border-width: 1px;}
+.form-control:focus{box-shadow: none;
+border: 3px solid var(--primary);}
+
+/* tabs-pills style */
+
+.nav-pills{
+    background-color: var(--primary);
+    font-family: "Poppins", sans-serif;
+
+  }
+
+  .nav-link{color: var(--white);}
+  .nav-link:hover{color:var(--black)}
+
+
+.nav-link:active{background-color: var(--blackbooth) !important;
+    color: var(--primary) !important;
+border-radius: 0px;
+outline: none;
+}
+
+
+.nav-link:focus{background-color: var(--blackbooth) !important;
+    color: var(--primary) !important;
+border-radius: 0;}
+
+.btn:active{background-color: var(--primary) !important;}
+
+/*Cards CSS*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*body{
+        background-color: #f9f6f2;
+}*/
+.card-img-top{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    padding: 20px;
+    object-fit: cover;
+}
+.card{
+    border-radius: 30px;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 20px 30px -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.card-body{
+    padding: 20px;
+    margin-top: -15px;
+    text-align: center;
+}
+.btn-primary{
+    border-radius: 50px;
+    width: 120px;
+}
+.btn-primary:hover{
+    background-color: black;
+    border: none;
+}
+
+
+#contain{margin-top: 150px;}
