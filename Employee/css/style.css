@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 /*Colour Setup*/
 :root{
-    --primary: #9844ebef;
+    --primary: #9844eb;
     --blackbooth: #212429;
     --black:#000000;
     --grey: #d3d4db;
@@ -211,8 +211,27 @@ h2{color: var(--white);}
 
 #scrollable{
     overflow-y: scroll;
-    max-height: 600px;
+    max-height: 700px;
     background-color:rgba(255, 255, 255, 0)!important;
     box-shadow: 0px 2px 5px var(--primary)!important;
 }
 
+/* This applies to the whole webpage scrollbar css */
+::-webkit-scrollbar {
+    width: 1px; /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the handle when you hover over it */
+}
