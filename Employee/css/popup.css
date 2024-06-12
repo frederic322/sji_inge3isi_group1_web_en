@@ -1,27 +1,75 @@
-.card{
-    margin:auto;
-    margin-top: 30px;
-} 
-
-.jkl {
-    display: none; /* Hide by default */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.699);
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(34, 34, 34, 0.5);
-    z-index: 1000;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-/* .popup-overlay {
-    display: none; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.card .row {
+    display: flex;
+    align-items: center;
+}
+
+.card img {
+    border-radius: 50%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-}  */
+    object-fit: cover;
+    margin-bottom: 8rem;
+    margin-left: 1.5rem;
+    /* border: 100px; */
+  
+}
+
+.card-body {
+    padding: 3rem;
+    margin-left: 3rem;
+
+}
+
+.card-body h5 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-body p {
+    margin: 5px 0;
+    color: #666;
+}
+
+
+.card-body p#Phone,
+.card-body p#Sector,
+.card-body p#activity,
+.card-body p#Region,
+.card-body p#Department,
+.card-body p#District,
+.card-body p#Neighborhood,
+.card-body p#pLocation {
+    line-height: 1.5;
+} 
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #110f0f;
+}
+
+.close-button:hover {
+    color: rgb(180, 13, 13);
+}
