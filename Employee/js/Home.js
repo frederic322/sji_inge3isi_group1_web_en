@@ -85,7 +85,7 @@ getData.forEach(userProfile => {
     cardContainer.append(col);
 });
 
-<<<<<<< HEAD
+
 function filterCards(searchTerm) {
     $("#cardContainer .col").each(function () {
         var text = $(this).children(".card").children(".card-body").children(".card-title").text().toLowerCase();
@@ -157,7 +157,7 @@ $('#searchInput').on('input', function(){
 //         });
 //     });
 // });
-=======
+
 //filtering by sector
 // Get all the buttons
 let buttons = document.querySelectorAll(".nav-link");
@@ -187,5 +187,3 @@ buttons.forEach(button => {
 });
 
 
-
->>>>>>> 0f147281fe242a2c0914da55d1b5b4530b942581
