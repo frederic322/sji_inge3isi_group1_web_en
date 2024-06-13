@@ -157,6 +157,24 @@ body {
 #cardContainer{display: flex;
     flex-wrap: wrap;}
 
+    .animated {
+        animation-name: fadeInUp;
+        animation-duration: 1s;
+        animation-iteration-count: 1; /* Animate only once */
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+
 /*glass effect*/
 /*.shape-1{
     height: 300px;
