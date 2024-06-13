@@ -30,7 +30,7 @@
       </a>
       <form class="d-flex" role="search">
         <input id="searchInput"  class="form-control me-2 w-750" type="search" placeholder="Search by name/Address" aria-label="Search">
-        
+
       </form>
       <a href="../Admin/login.html"><button id="admin" class="btn btn-outline-success me-2" type="button">Admin page</button></a>
     </nav>
@@ -72,19 +72,25 @@
 
 
   <div class="container py-5" id="contain">
-    
-    <h1 class="text-center">Welcome to our Employee Selection</h1>
-    <div id="cardContainer" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
 
+    <h1 class="text-center">Welcome to our Employee Selection</h1>
+    <div id="cardContainer" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5 wrapper">
+      <div class="shape-1"></div>
+      <div class="shape-2"></div>
       <div class="col">
 
-        <div class="card h-100 text-center">
-          <img src="./img/dish1.jpg" class="card-img-top" alt="..." id="img">
+
+        <div class="card h-100">
+          <img src="" class="card-img-top" alt="..." id="img">
           <div class="card-body">
             <h5 class="card-title" id="name"></h5>
             <p class="card-text" id="sector"></p>
             <p class="card-text" id="Activity"></p>
             <p class="card-text" id="Phone number"></p>
+            <p class="card-text" id="region"></p>
+            <p class="card-text" id="email" style="display: none;"></p>
+            <p class="card-text" id="address" style="display:none"></p>
+
           </div>
         </div>
       </div>
@@ -114,8 +120,9 @@
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>></script>
+    <script src="../js/sweetalert.js"></script>
  <script src="../js/Home.js"></script>
- 
+
 </body>
 
 </html>
