@@ -90,20 +90,21 @@ function filterCards(searchTerm) {
     $("#cardContainer .col").each(function () {
         var text = $(this).children(".card").children(".card-body").children(".card-title").text().toLowerCase();
         var textAddress = $(this).children(".card").children(".card-body").children("#address").text().toLowerCase();
-        if (text.includes(searchTerm)) {
+        if (text.includes(searchTerm) || textAddress.includes(searchTerm)) {
             $(this).show();
         } else {
             $(this).hide();
         }
-        if (textAddress.includes(searchTerm)) {
-            $(this).show();
-        } else {
-            $(this).hide();
-        }
+        // if (textAddress.includes(searchTerm)) {
+        //     $(this).show();
+        // } else {
+        //     $(this).hide();
+        // }
     });
 }
 $('#searchInput').on('input', function(){
     let val = $(this).val().toLowerCase()
+    console.log(val);
     filterCards(val)
 })
 
