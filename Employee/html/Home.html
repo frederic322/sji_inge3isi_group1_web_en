@@ -29,7 +29,8 @@
       </a>
       </a>
       <form class="d-flex" role="search">
-        <input class="form-control me-2 w-750" type="search" placeholder="Search by name/Address" aria-label="Search">
+        <input id="searchInput"  class="form-control me-2 w-750" type="search" placeholder="Search by name/Address" aria-label="Search">
+        
       </form>
       <button id="admin" class="btn btn-outline-success me-2" type="button">Admin page</button>
     </nav>
@@ -71,14 +72,16 @@
 
 
   <div class="container py-5" id="contain">
+    
     <h1 class="text-center">Welcome to our Employee Selection</h1>
     <div id="cardContainer" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-
-     <!-- <div id="cardContainer" class="row">-->
-        <!-- Cards will be inserted here -->
+<!-- 
+     <div id="cardsContainer" class="row">
+        Cards will be inserted here -->
 
 
       <div class="col">
+
         <div class="card h-100 text-center">
           <img src="./img/dish1.jpg" class="card-img-top" alt="..." id="img">
           <div class="card-body">
@@ -111,7 +114,10 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>></script>
  <script src="../js/Home.js"></script>
+ 
 </body>
 
 </html>
