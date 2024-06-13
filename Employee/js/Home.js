@@ -140,6 +140,47 @@ function showCardDetails(card) {
   });
 
 
+//pop up of things
+// Add event listeners to the card title and image
+document.addEventListener('DOMContentLoaded', () => {
+    const cardTitle = document.getElementById('name');
+    const cardImage = document.getElementById('img');
+    cardTitle.addEventListener('click', displayCardInformation);
+    cardImage.addEventListener('click', displayCardInformation);
+  });
+
+  // Function to display the card information in SweetAlert
+  function displayCardInformation() {
+    // Get the information from the card
+    const name = document.getElementById('name').textContent;
+    const sector = document.getElementById('sector').textContent;
+    const activity = document.getElementById('activity').textContent;
+    const phoneNumber = document.getElementById('phoneNumber').textContent;
+    const region = document.getElementById('region').textContent;
+    const email = document.getElementById('email').textContent;
+    const address = document.getElementById('address').textContent;
+
+    // Remove the display none for email and address
+    document.getElementById('email').style.display = 'block';
+    document.getElementById('address').style.display = 'block';
+
+    // Display the information in SweetAlert
+    Swal.fire({
+      title: name,
+      html:
+        `<p><strong>Sector:</strong> ${sector}</p>
+        <p><strong>Activity:</strong> ${activity}</p>
+        <p><strong>Phone number:</strong> ${phoneNumber}</p>
+        <p><strong>Region:</strong> ${region}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Address:</strong> ${address}</p>`,
+      confirmButtonText: 'Close'
+    });
+
+    // Restore the display none for email and address
+    document.getElementById('email').style.display = 'none';
+    document.getElementById('address').style.display = 'none';
+  }
 
 
 
