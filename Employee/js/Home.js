@@ -85,6 +85,7 @@ getData.forEach(userProfile => {
     cardContainer.append(col);
 });
 
+<<<<<<< HEAD
 function filterCards(searchTerm) {
     $("#cardContainer .col").each(function () {
         var text = $(this).children(".card").children(".card-body").children(".card-title").text().toLowerCase();
@@ -156,3 +157,35 @@ $('#searchInput').on('input', function(){
 //         });
 //     });
 // });
+=======
+//filtering by sector
+// Get all the buttons
+let buttons = document.querySelectorAll(".nav-link");
+
+// Add a click event listener to each button
+buttons.forEach(button => {
+    button.addEventListener("click", function() {
+        // Get the sector from the button text
+        let sector = this.textContent;
+
+        // Get all the cards
+        let cards = document.querySelectorAll(".card");
+
+        // Loop through the cards
+        cards.forEach(card => {
+            // Get the sector of the card
+            let cardSector = card.querySelector(".card-text").textContent;
+
+            // If the card's sector matches the button's sector or the button is 'All', show the card, otherwise hide it
+            if (cardSector === sector || sector === 'All') {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+});
+
+
+
+>>>>>>> 0f147281fe242a2c0914da55d1b5b4530b942581
